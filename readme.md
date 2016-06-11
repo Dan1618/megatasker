@@ -1,4 +1,4 @@
-Task lis application built with Backbonejs, TwitterBootstrap and LocalStorage as backend
+Task list application built with Backbonejs, TwitterBootstrap and LocalStorage as backend
 
 
 Installation:
