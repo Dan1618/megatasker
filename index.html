@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/libs/jquery-ui.structure.min.css">
+        <link rel="stylesheet" href="css/libs/jquery-ui.theme.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        
+        <script src="js/libs/jquery-2.1.1.min.js"></script> 
+        <script src="js/libs/jquery-ui.min.js"></script> 
+        <script src="js/libs/underscore-min.js"></script> 
+        <script src="js/libs/backbone-min.js"></script> 
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script> 
+        <script src="js/bb_app.js"></script> 
+        <script src="js/model.js"></script> 
+        <script src="js/view.js"></script> 
+        
+        <style>
+            .ui-slider-range { background: #428bca; }
+            .ui-slider-handle { border-color: #428bca !important; }
+        </style>
+        
+    </head>
+    <body>
+        <div id='contentAll'>
+    <div class="input-group one-task col-lg-4">
+        <input type="text" class="form-control">
+        <span class="input-group-btn ">
+            <button type="button" class="btn btn-warning js-newTab">Add new tab</button>
+            <button type="button" class="btn js-removeTab">Remove tab</button>
+        </span>
+    </div>
+        
+        
+    <ul id="taskTabs" class="nav nav-pills">
+<!--      <li class="active"><a href="#home" data-toggle="tab">Home</a></li> -->
+    </ul>
+        
+    
+    <div class="manage-tasks btn-group">
+      <button id="addNewTask" type="button" class="btn btn-warning">Add New Task</button>
+      <button type="button" id="selectAll" class="btn btn-primary">Select all</button>
+      <button type="button" id="clearSelection" class="btn btn-primary">Clear selection</button>
+      <button type="button" id="deleteSelected" class="btn">Delete Selected</button>
+    </div>
+
+    <div id='content' class="tab-content">
+    </div>
+    </div>
+        
+    </body>
+</html>

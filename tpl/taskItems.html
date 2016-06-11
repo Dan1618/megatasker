@@ -1,0 +1,34 @@
+    <% 
+    if (arguments[0])
+    {
+    %>
+        <div class="tab-pane fade" id="<%= this.TabNameTrim %>">
+            <ul>
+
+                <% } _.each(this.tasks, function(task){ %>
+                    <li class="eachTask col-lg-4 <% if(task['checked']){ %> bluebg <% } %>">
+                          <div class=' topLeft col-lg-9 form-group'>
+                              <textarea class='taskText form-control'><%=task['massage']%></textarea>
+                          </div>
+                          <div class='topRight col-lg-3 form-group'>
+                              <input <% if(task['checked']){ %>  checked="true" <% } %> class='selectTask' type='checkbox'/>
+                              <div class='taskRemove glyphicon glyphicon-remove'></div>
+                              <button style='width:100%' type="button" class="btn btn-primary saveTask">Save</button>
+                          </div>
+                          <div class='displayNone botLeft col-lg-9 form-group'>
+                              <div class='taskPrioritySlider'></div>
+                          </div>
+                          <div class='displayNone botRight col-lg-3 form-group'>
+                              <input type="number" value='<%=task['priority']%>' class='taskPriority form-control'/>
+                          </div>
+                      </li>
+                <% }); %>
+    <%
+    if (arguments[0])
+    {
+    %>
+            </ul>
+        </div>
+    <%
+    }
+    %>

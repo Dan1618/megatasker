@@ -1,0 +1,34 @@
+<li class="newTask eachTask col-lg-4">
+                  <div class=' topLeft col-lg-9 form-group'>
+                      <textarea class='newTaskText form-control'></textarea>
+                  </div>
+                  <div class='topRight col-lg-3 form-group'>
+                      <input class='selectNewTask' type='checkbox'/>
+                      <div class='newTaskRemove glyphicon glyphicon-remove'></div>
+                      <button style='width:100%' type="button" class="addTask btn btn-warning">Add</button>
+                  </div>
+                  <div class='displayNone botLeft col-lg-9 form-group'>
+                      <div class='newPrioritySlider'></div>
+                  </div>
+                  <div class='displayNone botRight col-lg-3 form-group'>
+                      <input type="number" value="50" class='newTaskPriority form-control'/>
+                  </div>
+              </li>
+              
+                      <script>
+            $(function() {
+                $( ".newPrioritySlider" ).slider({
+                    range: "min",
+                    value: 50,
+                    min: 1,
+                    max: 100,
+                    slide: function( event, ui ) {
+                        $(this).closest('.eachTask').find('.newTaskPriority').val( ui.value );
+                    },
+                    stop: function(  ) {
+//                        console.log($(this));
+                        directory.router.addNewTask($(this).closest('.eachTask').find('.newTaskPriority'));
+                    }
+                });
+            });
+        </script>
